@@ -197,7 +197,7 @@ export default function App() {
 
     // Если пользователь вошёл
     return (
-        <div className="flex flex-col items-center py-6 px-2">
+        <div className="flex flex-col items-center py-6 px-2 h-screen">
             <div className="flex justify-between items-center w-full sm:w-80 mb-4">
                 <div className="flex items-center gap-2">
                     {user.photoURL && (
@@ -218,10 +218,10 @@ export default function App() {
             </div>
 
             {/* Форма отправки */}
-            <div className="w-full sm:w-1/2">
+            <div className="w-full sm:w-1/2 h-[calc(100%-25px)]">
 
                 {/* Список сообщений */}
-                <div className="border rounded p-4 bg-gray-50 h-full overflow-y-auto">
+                <div className="border rounded p-4 bg-gray-50 h-4/5 overflow-y-scroll">
                     {messages.map((msg) => {
                         const date = msg.createdAt?.toDate ? msg.createdAt.toDate() : null;
                         const dateKey = date ? date.toDateString() : null;
