@@ -46,7 +46,7 @@ const app = initializeApp(firebaseConfig);
 const firebaseConfig = {
     apiKey:  import.meta.env.VITE_APIKEY,
     authDomain:  import.meta.env.VITE_AUTHDOMAIN,
-    projectId:  import.meta.env.VITE_PROJECTID,ff
+    projectId:  import.meta.env.VITE_PROJECTID,
 };
 
 const app = initializeApp(firebaseConfig);
