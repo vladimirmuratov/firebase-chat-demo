@@ -22,26 +22,6 @@ import {
     signOut,
 } from 'firebase/auth';
 
-/*
-* // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAcVcLMebCFXwh2gGXXjq0KqBRuWY81Vro",
-  authDomain: "fir-chat-demo-9f5aa.firebaseapp.com",
-  projectId: "fir-chat-demo-9f5aa",
-  storageBucket: "fir-chat-demo-9f5aa.firebasestorage.app",
-  messagingSenderId: "789600956074",
-  appId: "1:789600956074:web:47aec4ee6674d25d4dead3"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-* */
-
 // ⚡ Вставь свой конфиг
 const firebaseConfig = {
     apiKey:  import.meta.env.VITE_APIKEY,
