@@ -294,13 +294,13 @@ export default function App() {
                                         />
                                         <button
                                             onClick={() => handleEditSave(msg.id)}
-                                            className="bg-green-500 text-white px-2 rounded"
+                                            // className="bg-green-500 text-white px-2 rounded"
                                         >
                                             ✅
                                         </button>
                                         <button
                                             onClick={() => setEditingId(null)}
-                                            className="bg-gray-400 text-white px-2 rounded"
+                                            // className="bg-gray-400 text-white px-2 rounded"
                                         >
                                             ❌
                                         </button>
