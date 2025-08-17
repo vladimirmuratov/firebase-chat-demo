@@ -217,8 +217,7 @@ export default function App() {
                 </button>
             </div>
 
-            {/* Форма отправки */}
-            <div className="w-full sm:w-1/2 h-[calc(100%-25px)]">
+            <div className="w-full sm:w-1/2 h-[90%]">
 
                 {/* Список сообщений */}
                 <div className="border rounded p-4 bg-gray-50 h-4/5 overflow-y-scroll">
@@ -334,6 +333,7 @@ export default function App() {
                         );
                     })}
                 </div>
+                {/* Форма отправки */}
                 <form onSubmit={handleSubmit} className="flex gap-2 mt-4 w-full">
                     <input
                         type="text"
