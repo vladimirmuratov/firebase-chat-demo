@@ -221,7 +221,7 @@ export default function App() {
                 </button>
             </div>
 
-            <div className="w-full sm:w-1/2 h-[90%]">
+            <div className="w-full sm:w-1/2 h-[90%] flex flex-col justify-between">
 
                 {/* Список сообщений */}
                 <div ref={listRef} className="border rounded p-4 bg-gray-50 h-4/5 overflow-y-auto">
