@@ -224,7 +224,7 @@ export default function App() {
             <div className="w-full sm:w-1/2 h-[90%]">
 
                 {/* Список сообщений */}
-                <div ref={listRef} className="border rounded p-4 bg-gray-50 h-3/4 overflow-y-scroll">
+                <div ref={listRef} className="border rounded p-4 bg-gray-50 h-4/5 overflow-y-auto">
                     {messages.map((msg) => {
                         const date = msg.createdAt?.toDate ? msg.createdAt.toDate() : null;
                         const dateKey = date ? date.toDateString() : null;
