@@ -201,7 +201,7 @@ export default function App() {
 
     // Если пользователь вошёл
     return (
-        <div className="flex flex-col items-center py-6 px-2 h-screen">
+        <div className="flex flex-col items-center py-6 px-2 h-[100dvh]">
             <div className="flex justify-between items-center w-full sm:w-80 mb-4">
                 <div className="flex items-center gap-2">
                     {user.photoURL && (
