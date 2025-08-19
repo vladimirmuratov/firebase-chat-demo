@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import {
     addDoc,
@@ -21,6 +21,7 @@ import {
     signInWithPopup,
     signOut,
 } from 'firebase/auth';
+import { useAutoScroll } from './lib/useAutoScroll';
 
 // ⚡ Вставь свой конфиг
 const firebaseConfig = {
@@ -43,8 +44,11 @@ export default function App() {
     const [isLoginMode, setIsLoginMode] = useState(true);
     const [editingId, setEditingId] = useState(null);
     const [editingText, setEditingText] = useState('');
+    const listRef = useRef(null);
 
     let lastDate = null;
+
+    useAutoScroll(listRef, [messages]);
 
     const formatDateHeader = (date) => {
         const now = new Date();
@@ -220,7 +224,7 @@ export default function App() {
             <div className="w-full sm:w-1/2 h-[90%]">
 
                 {/* Список сообщений */}
-                <div className="border rounded p-4 bg-gray-50 h-4/5 overflow-y-scroll">
+                <div ref={listRef} className="border rounded p-4 bg-gray-50 overflow-y-scroll h-[90%]">
                     {messages.map((msg) => {
                         const date = msg.createdAt?.toDate ? msg.createdAt.toDate() : null;
                         const dateKey = date ? date.toDateString() : null;
@@ -318,13 +322,13 @@ export default function App() {
                                             }}
                                             className="text-blue-500"
                                         >
-                                            ✏️ Редактировать
+                                            Редактировать
                                         </button>
                                         <button
                                             onClick={() => handleDelete(msg.id)}
                                             className="text-red-500"
                                         >
-                                            🗑 Удалить
+                                            Удалить
                                         </button>
                                     </div>
                                 )}
